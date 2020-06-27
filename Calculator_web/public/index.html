@@ -23,9 +23,9 @@
                     <td colspan="5"><input id="display" style="text-align: center;" name="display" value="0" size="28" maxlength="25"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="Clear" onclick="this.form.display.value= 0 "></td>
-                    <td><input type="button" value="CE" onclick="deleteChar(this.form.display)"></td>
-                    <td><input type="button" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+                    <td><input type="button" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+                    <td><input type="button" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+                    <td><input type="button" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
                     <td><input type="button" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
                     <td><input type="button" value="%" onclick=" percent(this.form.display)"></td>
                 </tr>
@@ -59,9 +59,10 @@
                     <tr>
                         <td><input type="button" value="(" onclick="addChar(this.form.display, '(')"></td>
                         <td><input type="button" value=")" onclick="addChar(this.form.display,')')"></td>
-                        <td><input type="button" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
-                        <td><input type="button" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
-                        <td><input type="button" id="tan" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+                        <td><input type="button" value="Clear" onclick="this.form.display.value= 0 "></td>
+                        <td><input type="button" value="CE" onclick="deleteChar(this.form.display)"></td>
+                        <td><input type="button" id="tan" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+
                     </tr>
                     </tabel>
         </form>
