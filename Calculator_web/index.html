@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator WebPage</title>
+    <script src="./calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <form name="sci-calc">
+            <table class="calculator" cellspacing="0" cellpadding="1">
+                <tr>
+                    <td colspan="5">
+                        <h1 style="font-size: 40px; text-align:  center; color: rgb(250, 250, 250);">Calculator</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><input id="display" style="text-align: center;" name="display" value="0" size="28" maxlength="25"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Clear" onclick="this.form.display.value= 0 "></td>
+                    <td><input type="button" value="CE" onclick="deleteChar(this.form.display)"></td>
+                    <td><input type="button" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+                    <td><input type="button" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
+                    <td><input type="button" value="%" onclick=" percent(this.form.display)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="addChar(this.form.display, '7')"></td>
+                    <td><input type="button" value="8" onclick="addChar(this.form.display, '8')"></td>
+                    <td><input type="button" value="9" onclick="addChar(this.form.display, '9')"></td>
+                    <td><input type="button" value="n!" onclick="if(checkNum(this.form.display.value)) { factorial(this.form) }"></td>
+                    <td><input type="button" value="/" onclick="addChar(this.form.display, '/')"></td>
+                    <tr>
+                        <td><input type="button" value="4" onclick="addChar(this.form.display, '4')"></td>
+                        <td><input type="button" value="5" onclick="addChar(this.form.display, '5')"></td>
+                        <td><input type="button" value="6" onclick="addChar(this.form.display, '6')"></td>
+                        <td><input type="button" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
+                        <td><input type="button" value="*" onclick="addChar(this.form.display, '*')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="addChar(this.form.display, '1')"></td>
+                        <td><input type="button" value="2" onclick="addChar(this.form.display, '2')"></td>
+                        <td><input type="button" value="3" onclick="addChar(this.form.display, '3')"></td>
+                        <td><input type="button" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+                        <td><input type="button" value="-" onclick="addChar(this.form.display, '-')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="&#177" onclick="changeSign(this.form.display)"></td>
+                        <td><input type="button" value="0" onclick="addChar(this.form.display, '0')"></td>
+                        <td><input type="button" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+                        <td><input type="button" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+                        <td><input type="button" value="+" onclick="addChar(this.form.display, '+')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="(" onclick="addChar(this.form.display, '(')"></td>
+                        <td><input type="button" value=")" onclick="addChar(this.form.display,')')"></td>
+                        <td><input type="button" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+                        <td><input type="button" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+                        <td><input type="button" id="tan" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+                    </tr>
+                    </tabel>
+        </form>
+    </div>
+</body>
+
+</html>
